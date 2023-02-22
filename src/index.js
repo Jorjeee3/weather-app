@@ -99,32 +99,32 @@ async function showWeatherData() {
     weatherDescription.textContent = capitalizeFirstLetter(weatherDescription.textContent)
   })
 
-  console.log('klkmlkl----30293012309');
-  console.log('sakdna', getCitiesNew(cityName)[0]);
-  const city = getCitiesNew(cityName)[0]
-  console.log(getCitiesNew(cityName)[0]);
-  console.log('klkmlkl', city);
-  const weatherIcon = document.querySelector('.weather-icon')
-  const weatherIconWrapper = document.querySelector('.weather-icon-wrapper')
-  const cityNameTitle = document.querySelector('.city-name-title')
-  const weaterTemperature  = document.querySelector('.weater-temperature')
-  const weatherName  = document.querySelector('.weather-name')
-  const weatherDescription  = document.querySelector('.weather-description')
-  const currentDate = document.querySelector('.current-date')
-  const minDegree  = document.querySelector('.min-degree')
-  const maxDegree = document.querySelector('.max-degree')
+  // console.log('klkmlkl----30293012309');
+  // console.log('sakdna', getCitiesNew(cityName)[0]);
+  // const city = getCitiesNew(cityName)[0]
+  // console.log(getCitiesNew(cityName)[0]);
+  // console.log('klkmlkl', city);
+  // const weatherIcon = document.querySelector('.weather-icon')
+  // const weatherIconWrapper = document.querySelector('.weather-icon-wrapper')
+  // const cityNameTitle = document.querySelector('.city-name-title')
+  // const weaterTemperature  = document.querySelector('.weater-temperature')
+  // const weatherName  = document.querySelector('.weather-name')
+  // const weatherDescription  = document.querySelector('.weather-description')
+  // const currentDate = document.querySelector('.current-date')
+  // const minDegree  = document.querySelector('.min-degree')
+  // const maxDegree = document.querySelector('.max-degree')
   
 
-  weatherIconWrapper.innerHTML = `<img src="http://openweathermap.org/img/wn/${city.weather[0]['icon']}@2x.png">`
-  weaterTemperature.innerHTML = Math.round(city.main.temp - 273) + '°C'    
-  cityNameTitle.textContent = `${city.name}, ${city.sys.country}`
-  weatherName.textContent = city.weather[0].main
-  weatherDescription.textContent = city.weather[0].description
-  currentDate.textContent = getDate() 
-  minDegree.textContent = Math.round(city.main.temp_min - 273) + '°C'
-  maxDegree.textContent = Math.round(city.main.temp_max - 273) + '°C'
+  // weatherIconWrapper.innerHTML = `<img src="http://openweathermap.org/img/wn/${city.weather[0]['icon']}@2x.png">`
+  // weaterTemperature.innerHTML = Math.round(city.main.temp - 273) + '°C'    
+  // cityNameTitle.textContent = `${city.name}, ${city.sys.country}`
+  // weatherName.textContent = city.weather[0].main
+  // weatherDescription.textContent = city.weather[0].description
+  // currentDate.textContent = getDate() 
+  // minDegree.textContent = Math.round(city.main.temp_min - 273) + '°C'
+  // maxDegree.textContent = Math.round(city.main.temp_max - 273) + '°C'
 
-  weatherDescription.textContent = capitalizeFirstLetter(weatherDescription.textContent)
+  // weatherDescription.textContent = capitalizeFirstLetter(weatherDescription.textContent)
 }
 
 function getDate() {

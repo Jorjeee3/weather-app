@@ -30,11 +30,12 @@ export async function getCitiesNew (city) {
         let response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${searchText}&appid=b39ee5e4e806355fcce52d45a1d0f946&units=imperial`)
         let newData = await response.json()
         dataCity = newData
+        console.log( 'saadsd', dataCity);
+
+        return dataCity
     } catch (error) {
         console.log(error);
     }
-
-    return dataCity
 }
 
 export async function getCitiesOpenWeather (city) {
@@ -51,9 +52,11 @@ export async function getCitiesOpenWeather (city) {
         let response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${searchText}&appid=b39ee5e4e806355fcce52d45a1d0f946&units=imperial`)
         let newData = await response.json()
         dataCity = newData
+        console.log('saadsd', dataCity);
+        return dataCity
     } catch (error) {
         console.log(error);
     }
     
-    return dataCity
+    
 }
