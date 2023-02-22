@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export async function getCities (searchText) {
     const options = {
         method: 'GET',
