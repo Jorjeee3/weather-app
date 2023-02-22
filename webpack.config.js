@@ -3,7 +3,7 @@ const path = require('path');
 // const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
-  entry: ['./src/index.js', './src/normalize.css', './src/index.css', './src/services/weather/months.js', './src/services/weather/Weather.js'],
+  entry: ['./src/index.js', './src/normalize.css', './src/index.css', './src/months.js', './src/weather.js'],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),

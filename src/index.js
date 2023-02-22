@@ -1,5 +1,5 @@
-import MONTHS from './services/weather/months.js'
-import {getCities, getCitiesNew} from './services/weather/Weather.js'
+import MONTHS from './months.js'
+import {getCities, getCitiesNew} from './weather.js'
 
 const input = document.querySelector('.spotlight-input')
 const citiesList = document.querySelector('.spotlight-cities-list')
