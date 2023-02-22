@@ -20,10 +20,8 @@ input.addEventListener('input', () => {
 
 function listenCityItem() {
   const selectCityButtonsList = document.querySelectorAll('.button-cities-item')
-  console.log(selectCityButtonsList);
   selectCityButtonsList.forEach(function(el){
     el.addEventListener('click', () => {
-      console.log(el.value);
       input.value = el.value
       citiesList.classList.remove('display-block')
     })
@@ -91,7 +89,6 @@ async function showWeatherData() {
 
     weatherIconWrapper.innerHTML = `<img src="http://openweathermap.org/img/wn/${cityData.weather[0]['icon']}@2x.png">`
     weaterTemperature.innerHTML = Math.round((cityData.main.temp - 32) / 1.8000) + '°C'   
-    console.log(cityData.main.temp); 
     cityNameTitle.textContent = `${cityData.name}, ${cityData.sys.country}`
     weatherName.textContent = cityData.weather[0].main
     weatherDescription.textContent = cityData.weather[0].description
@@ -170,7 +167,6 @@ dubaiButton.addEventListener('click', () => {
 
     weatherIconWrapper.innerHTML = `<img src="http://openweathermap.org/img/wn/${cityData.weather[0]['icon']}@2x.png">`
     weaterTemperature.innerHTML = Math.round((cityData.main.temp - 32) / 1.8000) + '°C'   
-    console.log(cityData.main.temp); 
     cityNameTitle.textContent = `${cityData.name}, ${cityData.sys.country}`
     weatherName.textContent = cityData.weather[0].main
     weatherDescription.textContent = cityData.weather[0].description
@@ -203,7 +199,6 @@ londonButton.addEventListener('click', () => {
     
     weatherIconWrapper.innerHTML = `<img src="http://openweathermap.org/img/wn/${cityData.weather[0]['icon']}@2x.png">`
     weaterTemperature.innerHTML = Math.round((cityData.main.temp - 32) / 1.8000) + '°C'   
-    console.log(cityData.main.temp); 
     cityNameTitle.textContent = `${cityData.name}, ${cityData.sys.country}`
     weatherName.textContent = cityData.weather[0].main
     weatherDescription.textContent = cityData.weather[0].description
@@ -236,7 +231,6 @@ newYorkButton.addEventListener('click', () => {
     
     weatherIconWrapper.innerHTML = `<img src="http://openweathermap.org/img/wn/${cityData.weather[0]['icon']}@2x.png">`
     weaterTemperature.innerHTML = Math.round((cityData.main.temp - 32) / 1.8000) + '°C'   
-    console.log(cityData.main.temp); 
     cityNameTitle.textContent = `${cityData.name}, ${cityData.sys.country}`
     weatherName.textContent = cityData.weather[0].main
     weatherDescription.textContent = cityData.weather[0].description
@@ -269,7 +263,6 @@ parisButton.addEventListener('click', () => {
     
     weatherIconWrapper.innerHTML = `<img src="http://openweathermap.org/img/wn/${cityData.weather[0]['icon']}@2x.png">`
     weaterTemperature.innerHTML = Math.round((cityData.main.temp - 32) / 1.8000) + '°C'   
-    console.log(cityData.main.temp); 
     cityNameTitle.textContent = `${cityData.name}, ${cityData.sys.country}`
     weatherName.textContent = cityData.weather[0].main
     weatherDescription.textContent = cityData.weather[0].description
