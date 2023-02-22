@@ -28,7 +28,7 @@ export async function getCitiesNew (city) {
     // }
     try {
         let response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${searchText}&appid=b39ee5e4e806355fcce52d45a1d0f946&units=imperial`)
-        let newData = response.json()
+        let newData = await response.json()
         dataCity = newData
     } catch (error) {
         console.log(error);
@@ -49,7 +49,7 @@ export async function getCitiesOpenWeather (city) {
     // }
     try {
         let response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${searchText}&appid=b39ee5e4e806355fcce52d45a1d0f946&units=imperial`)
-        let newData = response.json()
+        let newData = await response.json()
         dataCity = newData
     } catch (error) {
         console.log(error);
