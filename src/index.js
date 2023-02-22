@@ -99,7 +99,11 @@ async function showWeatherData() {
     weatherDescription.textContent = capitalizeFirstLetter(weatherDescription.textContent)
   })
 
+  console.log('klkmlkl----30293012309');
+  console.log('sakdna', getCitiesNew(cityName)[0]);
   const city = getCitiesNew(cityName)[0]
+  console.log(getCitiesNew(cityName)[0]);
+  console.log('klkmlkl', city);
   const weatherIcon = document.querySelector('.weather-icon')
   const weatherIconWrapper = document.querySelector('.weather-icon-wrapper')
   const cityNameTitle = document.querySelector('.city-name-title')
