@@ -72,10 +72,39 @@ function capitalizeFirstLetter(string) {
 }
 
 async function showWeatherData() {
+  // let cityData = input.value
+  // let getReturnCitiesFunction = getCitiesNew(cityData)
+
+  // getReturnCitiesFunction.then(function(cityData) {
+  //   const weatherIcon = document.querySelector('.weather-icon')
+  //   const weatherIconWrapper = document.querySelector('.weather-icon-wrapper')
+  //   const cityNameTitle = document.querySelector('.city-name-title')
+  //   const weaterTemperature  = document.querySelector('.weater-temperature')
+  //   const weatherName  = document.querySelector('.weather-name')
+  //   const weatherDescription  = document.querySelector('.weather-description')
+  //   const currentDate = document.querySelector('.current-date')
+  //   const minDegree  = document.querySelector('.min-degree')
+  //   const maxDegree = document.querySelector('.max-degree')
+    
+
+  //   weatherIconWrapper.innerHTML = `<img src="http://openweathermap.org/img/wn/${cityData.weather[0]['icon']}@2x.png">`
+  //   weaterTemperature.innerHTML = Math.round((cityData.main.temp - 32) / 1.8000) + '°C'   
+  //   cityNameTitle.textContent = `${cityData.name}, ${cityData.sys.country}`
+  //   weatherName.textContent = cityData.weather[0].main
+  //   weatherDescription.textContent = cityData.weather[0].description
+  //   currentDate.textContent = getDate()
+  //   minDegree.textContent = Math.round((cityData.main.temp_min - 32) / 1.8000) + '°C'
+  //   maxDegree.textContent = Math.round((cityData.main.temp_max - 32) / 1.8000) + '°C'
+
+  //   weatherDescription.textContent = capitalizeFirstLetter(weatherDescription.textContent)
+  // })
+
   let cityData = input.value
   let getReturnCitiesFunction = getCitiesNew(cityData)
 
-  getReturnCitiesFunction.then(function(cityData) {
+  console.log('getReturnCitiesFunction',getReturnCitiesFunction);
+
+  getReturnCitiesFunction.then(function(citydata) {
     const weatherIcon = document.querySelector('.weather-icon')
     const weatherIconWrapper = document.querySelector('.weather-icon-wrapper')
     const cityNameTitle = document.querySelector('.city-name-title')
@@ -86,15 +115,15 @@ async function showWeatherData() {
     const minDegree  = document.querySelector('.min-degree')
     const maxDegree = document.querySelector('.max-degree')
     
-
-    weatherIconWrapper.innerHTML = `<img src="http://openweathermap.org/img/wn/${cityData.weather[0]['icon']}@2x.png">`
-    weaterTemperature.innerHTML = Math.round((cityData.main.temp - 32) / 1.8000) + '°C'   
-    cityNameTitle.textContent = `${cityData.name}, ${cityData.sys.country}`
-    weatherName.textContent = cityData.weather[0].main
-    weatherDescription.textContent = cityData.weather[0].description
+    // console.log('citydata.weather[0]', citydata.weather[0]);
+    weatherIconWrapper.innerHTML = `<img src="http://openweathermap.org/img/wn/${citydata.weather[0]['icon']}@2x.png">`
+    weaterTemperature.innerHTML = Math.round((citydata.main.temp - 32) / 1.8000) + '°C'   
+    cityNameTitle.textContent = `${citydata.name}, ${citydata.sys.country}`
+    weatherName.textContent = citydata.weather[0].main
+    weatherDescription.textContent = citydata.weather[0].description
     currentDate.textContent = getDate()
-    minDegree.textContent = Math.round((cityData.main.temp_min - 32) / 1.8000) + '°C'
-    maxDegree.textContent = Math.round((cityData.main.temp_max - 32) / 1.8000) + '°C'
+    minDegree.textContent = Math.round((citydata.main.temp_min - 32) / 1.8000) + '°C'
+    maxDegree.textContent = Math.round((citydata.main.temp_max - 32) / 1.8000) + '°C'
 
     weatherDescription.textContent = capitalizeFirstLetter(weatherDescription.textContent)
   })
